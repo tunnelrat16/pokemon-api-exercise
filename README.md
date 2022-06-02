@@ -8,10 +8,12 @@ Your task is to build and deploy an API to create, read, update, and delete Poke
 {
   "results": [{
     "id": 1,
-    "name": "bulbasaur"
+    "name": "bulbasaur",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
   },{
     "id": 2,
-    "name": "ivysaur"
+    "name": "ivysaur",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
   }]
 }
 ```
