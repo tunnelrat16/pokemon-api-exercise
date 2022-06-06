@@ -33,6 +33,15 @@ public class PokemonController {
     return createHashPlural(results);
   }
 
+  @GetMapping("/{id}")
+  @ResponseStatus(HttpStatus.OK)
+  public Map<String, Pokemon> read(@PathVariable Long id) {
+    Pokemon pokemon = pokemonService
+        .findById(id)
+        .orElseThrow(() -> new ResourceNotFoundException("No pokemon with that ID"));
+    return createHashSingular(pokemon);
+  }
+
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
   public Map<String, Pokemon> create(@Validated @RequestBody Pokemon pokemon) {
